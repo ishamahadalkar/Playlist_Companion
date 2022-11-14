@@ -78,6 +78,11 @@ df['c'] = df.cluster.map({0:colors[0], 1:colors[1], 2:colors[2]})
 # Results:
 fig, ax = plt.subplots(1, figsize=(8,8))
 
+# Remove this line below if you want to plot all the songs
+df = df.loc[df['Index'].isin(similar_songs_index)]
+
+
+
 # Songs by Popularity
 plt.scatter(df.Year, df.Popularity, c=df.c, alpha = 0.6, s=10)
 # Create a list of legend elements
@@ -107,3 +112,4 @@ plt.xlabel('Danceability')
 plt.ylabel('Popularity')
 
 plt.show()
+
