@@ -4,7 +4,7 @@
 # to find the songs that are the most similar using its attributes. 
 # Also creating a cluster of similar songs with a fixed value of K
 
-# Input: Spotify 2000's MegaSet Data - spotify-data.csv
+# Input: Songs Data - songs-data.csv
 
 # Output: 1. List of songs similar to a selected song.
 # 2. Cluster of similar songs using K Means CLustering. 
@@ -17,43 +17,62 @@ from sklearn.cluster import KMeans
 import matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
 
-# Reading in the Spotfy data
-# Index: ID
-# Title: Name of the Track
-# Artist: Name of the Artist
-# Genre: Genre of the track
-# Year: Release Year of the track
-# BPM: The tempo of the song
-# Energy: The energy of a song - the higher the value, the more energtic. song
-# Danceability: The higher the value, the easier it is to dance to this song.
-# Loudness: The higher the value, the louder the song.
-# Liveness:
-# Valence: The higher the value, the more positive mood for the song.
-# Length: The duration of the song.
-# Acousticness: The higher the value the more acoustic the song is.
-# Speechiness: The higher the value the more spoken words the song contains
-# Popularity: The higher the value the more popular the song is.
+# Reading in the Songs data
 
-df = pd.read_csv('spotify-data.csv')
+df = pd.read_csv('songs-data.csv')
+
 
 # Finding the cosine similarity of one song with all the other songs
-attributes = df.loc[:,'BPM':]
+attributes = df.loc[:,'Danceability':]
 attributes = attributes.apply(pd.to_numeric)
 
 # Similarity Matrix
 similarity = cosine_similarity(attributes)
 
 # Sorting the selected song list and returning the index positions uisng descending similarity scores
-# Currently selecting 'Fix You' by Coldplay which has an Index of 21
-np_array = np.array(similarity[21])
+# Currently selecting 'Dynamite' by BTS which has an Index of 1841
+
+print("\nCurrently analyzing 'Dynamite' by BTS\n")
+
+np_array = np.array(similarity[1841])
 sorted_index_pos = [index for index, num in sorted(enumerate(np_array), key=lambda x: x[-1], reverse=True)]
 
 # Finding the 7 most similar songs to the selected song
-# i = 0: Shows the index of the selected song.
 similar_songs_index = sorted_index_pos[:8]
 similar_songs = df.loc[df['Index'].isin(similar_songs_index)]
 
-# Showing the selected song and the 7 songs most similar to this song
+# Showing the selected song and the 6 songs most similar to this song
+print("Most Similar Songs")
+print(similar_songs)
+
+# Currently selecting 'Money Trees' by Kendrick Lamar ft. Jay Rock which has an Index of 4205
+
+print("\nCurrently analyzing 'Money Trees' by Kendrick Lamar ft. Jay Rock\n")
+
+np_array = np.array(similarity[4205])
+sorted_index_pos = [index for index, num in sorted(enumerate(np_array), key=lambda x: x[-1], reverse=True)]
+
+# Finding the 6 most similar songs to the selected song
+similar_songs_index = sorted_index_pos[:9]
+similar_songs = df.loc[df['Index'].isin(similar_songs_index)]
+
+# Showing the selected song and the 6 songs most similar to this song
+print("Most Similar Songs")
+print(similar_songs)
+
+# Currently selecting 'Dancing Queen' by ABBA which has an Index of 1488
+
+print("\nCurrently analyzing 'Dancing Queen' by ABBA\n")
+
+np_array = np.array(similarity[1488])
+sorted_index_pos = [index for index, num in sorted(enumerate(np_array), key=lambda x: x[-1], reverse=True)]
+
+# Finding the 6 most similar songs to the selected song
+similar_songs_index = sorted_index_pos[:7]
+similar_songs = df.loc[df['Index'].isin(similar_songs_index)]
+
+# Showing the selected song and the 6 songs most similar to this song
+print("Most Similar Songs")
 print(similar_songs)
 
 # K Means Clustering
@@ -79,8 +98,7 @@ df['c'] = df.cluster.map({0:colors[0], 1:colors[1], 2:colors[2]})
 fig, ax = plt.subplots(1, figsize=(8,8))
 
 # Remove this line below if you want to plot all the songs
-df = df.loc[df['Index'].isin(similar_songs_index)]
-
+# df = df.loc[df['Index'].isin(similar_songs_index)]
 
 
 # Songs by Popularity
