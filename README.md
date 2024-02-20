@@ -23,7 +23,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/ishamahadalkar/Nashville_Housing">
-    <img src="logo.jpeg" width="100%" alt="Logo" >
+    <img src="logo_playlist.png" height="350px" alt="Logo" >
   </a>
   
 <!-- Section Name tag -->
@@ -76,12 +76,8 @@
 ### Built With
 
 * [![Python][python-badge]][python-url]
-* [![scikit-learn][scikit-learn-badge]][scikit-learn-url]
 * [![Pandas][pandas-badge]][pandas-url]
-* [![NumPy][numpy-badge]][numpy-url]
 * [![Matplotlib][matplotlib-badge]][matplotlib-url]
-* [![Seaborn][seaborn-badge]][seaborn-url]
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -109,9 +105,11 @@ To get started with the project, follow these steps:
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/ishamahadalkar/Academic_Prediction
+   git clone https://github.com/ishamahadalkar/Playlist_Companion
    ```
-   
+ 2. Python: Install Python from the official website and set up the required libraries for data analysis and visualization.
+ 3. Matplotlib: Install Matplotlib using pip or conda package managers.
+    
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- DATA SOURCES -->
@@ -120,34 +118,21 @@ To get started with the project, follow these steps:
 <!-- Section Name tag -->
 <a name="#data-sources"></a>
 
-The project utilizes a dataset from the Polytechnic Institute of Portalegre, Portugal, containing information on students enrolled in various degree programs. The dataset includes demographic, socio-economic, and academic data.
+The project utilizes two primary datasets sourced from Kaggle:
+
+1. "Spotify Top Chart Songs 2022": Provides insights into weekly top chart songs collected from Spotify's global charts.
+2. "Spotify 2000's MegaSet Data": A larger dataset comprising 54,000 songs from diverse regions for in-depth analysis.
 
 ### Preprocessing
 
 <!-- Section Name tag -->
 <a name="#preprocessing"></a>
 
-- Cleaning:
+Initial data preprocessing involves:
 
-  1. Removed any duplicate rows or null values from the dataset.
-  2. Renamed columns for improved readability and consistency.
-
-- Encoding:
-
-  1. Utilized One-Hot Encoding to convert categorical variables into numerical format.
-  2. Encoded the target variable to assign specific integers to each label for modeling purposes.
-
-- Feature Selection:
-
-  1. Conducted feature selection to identify the most relevant attributes for predicting student outcomes.
-  2. Analyzed feature correlations and relationships to the target variable.
-  3. Manually selected features based on relevance to the problem and domain knowledge.
-  4. Dropped less important features to reduce dimensionality of the dataset.
-
-- Addressing Class Imbalance:
-
-  1. Implemented SMOTE sampling technique to address class imbalance in the dataset.
-  2. Generated synthetic samples for the minority class to achieve a balanced distribution.
+- Removal of duplicate entries.
+- Elimination of rows with missing or incorrect values.
+- Filtering out songs with a popularity index below 70 (out of 100).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -158,17 +143,10 @@ The project utilizes a dataset from the Polytechnic Institute of Portalegre, Por
 <!-- Section Name tag -->
 <a name="#approach"></a>
 
-1. Utilized various classification models, including:
-  - Logistic Regression
-  - Decision Trees
-  - Random Forests
-  - Support Vector Machines (SVMs)
-  - Ensemble methods (e.g., Voting Classifier)
+The project adopts a multifaceted approach, involving:
 
-2. Models were trained to predict student outcomes based on:
-  - First-year academic performance
-  - Demographic and socio-economic factors
-
+1. Algorithm Development: Python program for computing similarity scores and forming clusters using K Means Clustering.
+2. Data Visualization: Utilization of Matplotlib for generating static radar charts and scatterplots to visualize music data.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -178,16 +156,10 @@ The project utilizes a dataset from the Polytechnic Institute of Portalegre, Por
 <!-- Section Name tag -->
 <a name="#code-structure"></a>
 
-The codebase is organized into:
+The project's code structure involves:
 
-Jupyter Notebooks: Used for exploratory data analysis, visualization, and iterative development of models. Contains modularized code for specific tasks such as data preprocessing, model development, and evaluation.
-
-The file focuses on a distinct aspect of the project:
-
-Data preprocessing: Cleaning, encoding, and feature selection.
-Model development: Implementation of various classification algorithms.
-Model evaluation: Assessing model performance using appropriate metrics.
-
+- cluster.py: Python scripts for algorithm development and data analysis.
+- CSV and Excel files that have the data.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -198,10 +170,11 @@ Model evaluation: Assessing model performance using appropriate metrics.
 <!-- Section Name tag -->
 <a name="#lessons-learned"></a>
 
-1. Feature Selection: Importance of selecting relevant features to improve model performance and interpretability.
-2. Model Evaluation: Understanding the significance of evaluation metrics in assessing model effectiveness.
-3. Class Imbalance: Addressing class imbalance is critical for achieving reliable predictions, especially in educational datasets.
-4. Complexity of Educational Data: Recognizing the complexities inherent in educational data and the challenges they pose for predictive analysis.
+- Navigating Large Datasets with Python, Pandas, and NumPy: Delving into sizable datasets taught us invaluable skills in handling vast amounts of data efficiently. Through the powerful libraries of Python, namely Pandas and NumPy, we learned techniques to manipulate, analyze, and extract insights from extensive datasets, fostering a deeper understanding of data processing and management.
+
+- Exploring Clustering Algorithms: Our exploration into clustering algorithms provided a deeper understanding of unsupervised learning techniques, enabling us to identify patterns and structures within data. By experimenting with algorithms such as K Means Clustering, we gained insights into grouping similar data points, facilitating more nuanced analysis and interpretation of complex datasets.
+
+- Utilizing Radar Charts for Visualizations: Incorporating radar charts into our visualizations enhanced our ability to represent multidimensional data effectively. By visualizing multiple attributes simultaneously, we were able to grasp the relationships and variations within datasets more intuitively, enabling clearer insights and communication of findings.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -211,7 +184,9 @@ Model evaluation: Assessing model performance using appropriate metrics.
 <!-- Section Name tag -->
 <a name="#future-work"></a>
 
-Future work includes exploring deep learning architectures for improved predictive performance, enhancing model interpretability, and extending the study to other educational contexts.
+1. Interactive Application Development: Enhance user engagement through the development of an interactive application using Processing and D3.
+2. Real-time Data Integration: Integrate the Spotify API for real-time data retrieval, enhancing the accuracy of music recommendations.
+3. Database Management: Implement SQL for efficient database management, supporting the recommender system's functionality.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -248,7 +223,7 @@ Project Link: [https://github.com/ishamahadalkar/Academic_Prediction](https://gi
 <!-- Section Name tag -->
 <a name="#acknowledgments"></a>
 
-We would like to express our gratitude to V. Realinho, M. V. Martins, D. Tolledo, J. Machado, and L. M. Baptista for their contribution to the UCI Machine Learning Repository and their work on "Predict students' dropout and academic success." Their dataset and research have been instrumental in the development of our project.
+We would like to acknowledge Kaggle for providing the datasets used in this project, as well as the developers of Python, Matplotlib, Processing, and D3 for their invaluable contributions to the field of data analysis and visualization.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
