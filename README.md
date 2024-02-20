@@ -23,7 +23,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/ishamahadalkar/Playlist_Companion">
-    <img src="logo_playlist.png" height="350px" alt="Logo" >
+    <img src="logo_playlist.jpeg" height="350px" alt="Logo" >
   </a>
   
 <!-- Section Name tag -->
