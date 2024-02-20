@@ -22,7 +22,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/ishamahadalkar/Nashville_Housing">
+  <a href="https://github.com/ishamahadalkar/Playlist_Companion">
     <img src="logo_playlist.png" height="350px" alt="Logo" >
   </a>
   
@@ -231,17 +231,17 @@ We would like to acknowledge Kaggle for providing the datasets used in this proj
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[repository-name]: https://github.com/ishamahadalkar/Academic_Prediction
-[contributors-shield]: https://img.shields.io/github/contributors/ishamahadalkar/Academic_Prediction.svg?style=for-the-badge
-[contributors-url]: https://github.com/ishamahadalkar/Academic_Prediction/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/ishamahadalkar/Academic_Prediction.svg?style=for-the-badge
-[forks-url]: https://github.com/ishamahadalkar/Academic_Prediction/network/members
-[stars-shield]: https://img.shields.io/github/stars/ishamahadalkar/Academic_Prediction.svg?style=for-the-badge
-[stars-url]: https://github.com/ishamahadalkar/Academic_Prediction/stargazers
-[issues-shield]: https://img.shields.io/github/issues/ishamahadalkar/Academic_Prediction.svg?style=for-the-badge
-[issues-url]: https://github.com/ishamahadalkar/Academic_Prediction/issues
-[license-shield]: https://img.shields.io/github/license/ishamahadalkar/Academic_Prediction.svg?style=for-the-badge
-[license-url]: https://github.com/ishamahadalkar/Academic_Prediction/blob/master/LICENSE.txt
+[repository-name]: https://github.com/ishamahadalkar/Playlist_Companion
+[contributors-shield]: https://img.shields.io/github/contributors/ishamahadalkar/Playlist_Companion.svg?style=for-the-badge
+[contributors-url]: https://github.com/ishamahadalkar/Playlist_Companion/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/ishamahadalkar/Playlist_Companion.svg?style=for-the-badge
+[forks-url]: https://github.com/ishamahadalkar/Playlist_Companion/network/members
+[stars-shield]: https://img.shields.io/github/stars/ishamahadalkar/Playlist_Companion.svg?style=for-the-badge
+[stars-url]: https://github.com/ishamahadalkar/Playlist_Companion/stargazers
+[issues-shield]: https://img.shields.io/github/issues/ishamahadalkar/Playlist_Companion.svg?style=for-the-badge
+[issues-url]: https://github.com/ishamahadalkar/Playlist_Companion/issues
+[license-shield]: https://img.shields.io/github/license/ishamahadalkar/Playlist_Companion.svg?style=for-the-badge
+[license-url]: https://github.com/ishamahadalkar/Playlist_Companion/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/isha-mahadalkar
 
